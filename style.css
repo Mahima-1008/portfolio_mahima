@@ -1,0 +1,124 @@
+/* ==============================================================
+   Mahima Kumari - Portfolio Custom Stylesheet
+   Soft Pastel Blue Bento Style Inspired by Reference Design
+   ============================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --pastel-bg: #EAF1FB;
+  --pastel-card: #F6F9FE;
+  --pastel-card-border: #D7E5F6;
+  --pastel-navy: #0E2849;
+  --brand-blue: #2A6FD6;
+  --brand-accent: #75ABF0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--pastel-bg);
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Script Calligraphy Font for Signature Overlay */
+.font-script {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Heading Font */
+.font-heading {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Card Hover Elevation */
+.bento-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-3px);
+  border-color: #BBD5F6;
+}
+
+/* Skill Pill Hover Micro-Interaction */
+.skill-pill {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-pill:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E8F0FC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B4CEF3;
+  border-radius: 9999px;
+  border: 2px solid #E8F0FC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7DAEF0;
+}
+
+/* Sparkle Floating Animation */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(4deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Print Optimization for Resume */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resumeModal, #resumeModal * {
+    visibility: visible;
+  }
+  #resumeModal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  #resumeModal .max-w-3xl {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+  }
+  #resumeModal button {
+    display: none !important;
+  }
+  #resumeModal .max-h-\[70vh\] {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}

@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #f8f9fa;
+  --bg-card: #ffffff;
+  --border-card: #e4e4e7;
+  --text-main: #09090b;
+  --text-muted: #52525b;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #f8f9fa;
+  color: #09090b;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #09090b;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Script Calligraphy Font for Signature Overlay */
+.font-script {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Heading Font */
+.font-heading {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Card Hover Elevation in Inverted White Monochrome */
+.bento-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-3px);
+  border-color: #a1a1aa;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08), 0 4px 14px -3px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom Scrollbar - Light Monochrome */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 9999px;
+  border: 2px solid #f4f4f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* Print Optimization for Resume */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resumeModal, #resumeModal * {
+    visibility: visible;
+  }
+  #resumeModal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white !important;
+    color: black !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  #resumeModal .max-w-3xl {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    background: white !important;
+    color: black !important;
+  }
+  #resumeModal button {
+    display: none !important;
+  }
+  #resumeModal .max-h-\[70vh\] {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
