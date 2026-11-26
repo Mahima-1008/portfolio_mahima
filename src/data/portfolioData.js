@@ -7,7 +7,7 @@ export const portfolioData = {
     email: "mahimakumariydv2612@gmail.com",
     phone: "+91-6207006174",
     github: "https://github.com/Mahima-1008",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/mahima1008/",
     year: "2026",
     status: "Available for Opportunities"
   },
